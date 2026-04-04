@@ -15,4 +15,8 @@
     <delete id="deletecar1">
         delete from t_car where id = #{id}
     </delete>
+
+    <update id="updatecar1">
+        update t_car set brand = #{brand},price = #{price} where id = #{id}
+    </update>
 </mapper>
