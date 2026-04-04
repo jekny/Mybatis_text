@@ -1,5 +1,6 @@
 package com.hyw.mybatistest01;
 
+import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
@@ -45,6 +46,7 @@ public class test01 {
         //其中jdbc管理机制中默认con.setAutoCommit(false);
         //所以用mybatis是需要手动提交(xx.commit)
         sqlSession.commit();
+        sqlSession.close();
 
     }
 }

@@ -5,6 +5,6 @@
 <!--映射文件,专门写sql语句的文件,映射成对象-->
 <mapper namespace="car">
     <insert id="carinsert">
-        insert into t_car values (2,'京A12345','byd',30,'2026-04-05','电')
+        insert into t_car values (7,'京A12345','byd',30,'2026-04-05','电')
     </insert>
 </mapper>
