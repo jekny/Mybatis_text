@@ -7,7 +7,13 @@
     <groupId>org.example</groupId>
     <artifactId>mybatis_01_introduction</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
     <dependencies>
         <!-- Source: https://mvnrepository.com/artifact/org.mybatis/mybatis -->
