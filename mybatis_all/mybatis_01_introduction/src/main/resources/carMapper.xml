@@ -11,4 +11,8 @@
     <insert id="carinsert2">
         insert into t_car values (#{id},#{num},#{brand},#{price},#{time},#{type})
     </insert>
+
+    <delete id="deletecar1">
+        delete from t_car where id = #{id}
+    </delete>
 </mapper>
