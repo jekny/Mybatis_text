@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--映射文件,专门写sql语句的文件,映射成对象-->
+<mapper namespace="car">
+    <insert id="carinsert">
+        insert into t_car values (2,'京A12345','byd',30,'2026-04-05','电')
+    </insert>
+</mapper>
