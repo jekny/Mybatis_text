@@ -24,4 +24,8 @@
         select id,num,brand,price from t_car where id = #{id}
     </select>
 
+    <select id="selectcar2" resultType="com.hyw.entity.car">
+        select id,num,brand,price from t_car where num = #{num}
+    </select>
+
 </mapper>
