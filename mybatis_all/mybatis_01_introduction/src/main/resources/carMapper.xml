@@ -19,4 +19,9 @@
     <update id="updatecar1">
         update t_car set brand = #{brand},price = #{price} where id = #{id}
     </update>
+
+    <select id="selectcar1" resultType="com.hyw.entity.car">
+        select id,num,brand,price from t_car where id = #{id}
+    </select>
+
 </mapper>
