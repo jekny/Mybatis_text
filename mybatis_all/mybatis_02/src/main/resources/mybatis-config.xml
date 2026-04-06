@@ -8,6 +8,11 @@
         <setting name="logImpl" value="STDOUT_LOGGING"/>
     </settings>
 
+<!--    起别名,在mapper.xml中的返回type写别名即可-->
+    <typeAliases>
+        <typeAlias type="com.hyw.test01.entity.car" alias="car"/>
+    </typeAliases>
+
     <!--    多环境environments-->
     <environments default="development">
         <!--        环境1-->
@@ -28,6 +33,11 @@
     <mappers>
         <!--        其中一个sqlMapper.xml配置路径-->
         <!--        mapper从根目录(resources)开始找-->
-        <mapper resource="mycarMapper.xml"/>
+<!--        <mapper resource="carMapper.xml"/>-->
+        <package name="com.hyw.test01.mapper"/>
+<!--        以后的生产方式用package，只需配一个路径即可，mybatis会自动识别该目录下的所有Mapper文件，
+            这样在java目录中写多少个xxxMapper在这里只需要写一个<package>就行，如果用<mapper>的话就要配很多-->
+<!--        注意①mapper和mapper.xml的名字要一致-->
+<!--        注意②mapper和mapper.xml的目录位置要一样-->
     </mappers>
 </configuration>

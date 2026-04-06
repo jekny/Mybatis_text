@@ -4,11 +4,11 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--映射文件,专门写sql语句的文件,映射成对象-->
 <mapper namespace="com.hyw.test01.mapper.carMapper">
-        <select id="selectAll" resultType="com.hyw.test01.entity.car" >
+        <select id="selectAll" resultType="car" >
                 select id,num,type,brand from ${name}
         </select>
 
-        <select id="selectLike" resultType="com.hyw.test01.entity.car" >
+        <select id="selectLike" resultType="car" >
                 select
                     id,num,type,brand
                 from
