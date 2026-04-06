@@ -55,4 +55,14 @@ public class test {
 
         sqlSession.close();
     }
+
+    @Test
+    public void test04(){
+        carMapper mapper = sqlSessionUtil.getSqlSession().getMapper(carMapper.class);
+        List<car> cars = mapper.selectByTwo(12, "桂222");
+        for (car car1 :
+                cars) {
+            System.out.println(car1.toString());
+        }
+    }
 }
