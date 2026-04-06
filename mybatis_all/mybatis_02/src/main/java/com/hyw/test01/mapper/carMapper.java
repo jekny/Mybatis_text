@@ -15,4 +15,6 @@ import java.util.List;
 public interface carMapper {
     List<car> selectAll(String name);
     List<car> selectLike(String name);//模糊查询
+
+    void insertCar(car car);//返回声明周期内的主键值
 }

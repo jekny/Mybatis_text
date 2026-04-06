@@ -16,4 +16,11 @@
                 where
                     brand like concat('%',#{brand},'%')
         </select>
+
+        <insert id="insertCar" useGeneratedKeys="true" keyProperty="id">
+            insert into
+                t_car (id,num,brand,price,time,type)
+            values
+                (#{id},#{num},#{brand},#{price},#{time},#{type})
+        </insert>
 </mapper>

@@ -36,4 +36,23 @@ public class test {
             System.out.println(car1.toString());
         }
     }
+
+    @Test
+    public void test03(){
+        SqlSession sqlSession = sqlSessionUtil.getSqlSession();
+        carMapper mapper = sqlSession.getMapper(carMapper.class);
+        car car1 = new car();
+        car1.setId(23);
+        car1.setNum("桂455667");
+        car1.setBrand("byd");
+        car1.setPrice(34.0);
+        car1.setTime("2023-02-12");
+        car1.setType("电");
+        mapper.insertCar(car1);
+        sqlSession.commit();
+
+        System.out.println(car1.getId());
+
+        sqlSession.close();
+    }
 }
