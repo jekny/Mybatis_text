@@ -14,4 +14,5 @@ import java.util.List;
  */
 public interface carMapper {
     List<car> selectAll(String name);
+    List<car> selectLike(String name);//模糊查询
 }

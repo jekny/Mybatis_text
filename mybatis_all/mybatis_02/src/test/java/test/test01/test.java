@@ -26,4 +26,14 @@ public class test {
         }
 
     }
+
+    @Test
+    public void test02(){
+        carMapper mapper = sqlSessionUtil.getSqlSession().getMapper(carMapper.class);
+        List<car> brand = mapper.selectLike("by");
+        for (car car1 :
+                brand) {
+            System.out.println(car1.toString());
+        }
+    }
 }

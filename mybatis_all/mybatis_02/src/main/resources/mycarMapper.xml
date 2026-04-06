@@ -7,4 +7,13 @@
         <select id="selectAll" resultType="com.hyw.test01.entity.car" >
                 select id,num,type,brand from ${name}
         </select>
+
+        <select id="selectLike" resultType="com.hyw.test01.entity.car" >
+                select
+                    id,num,type,brand
+                from
+                    t_car
+                where
+                    brand like concat('%',#{brand},'%')
+        </select>
 </mapper>
