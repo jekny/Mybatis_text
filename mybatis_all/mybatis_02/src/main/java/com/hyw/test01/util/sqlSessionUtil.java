@@ -27,7 +27,7 @@ public class sqlSessionUtil {
                 }
         }
 
-        public SqlSession getSqlSession(){
+        public static SqlSession getSqlSession(){
                 SqlSession sqlSession = factory.openSession();
                 return sqlSession;
         }
