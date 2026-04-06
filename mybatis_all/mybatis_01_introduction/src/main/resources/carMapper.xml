@@ -8,7 +8,7 @@
         insert into t_car values (7,'京A12345','byd',30,'2026-04-05','电')
     </insert>
 
-    <insert id="carinsert2">
+    <insert id="carinsert2" parameterType="Map">
         insert into t_car values (#{id},#{num},#{brand},#{price},#{time},#{type})
     </insert>
 
