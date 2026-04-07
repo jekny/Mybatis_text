@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--    开启日志-->
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+    <typeAliases>
+        <typeAlias type="com.hyw.test01.entity.car" alias="car"></typeAlias>
+    </typeAliases>
+
+    <!--    多环境environments-->
+    <environments default="development">
+        <!--        环境1-->
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <!--            mybatis框架自带的连接池-->
+            <dataSource type="POOLED">
+                <!--                连接池的配置信息-->
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/mybatis01"/>
+                <property name="username" value="root"/>
+                <property name="password" value="1234"/>
+            </dataSource>
+        </environment>
+
+    </environments>
+
+    <mappers>
+        <!--        其中一个sqlMapper.xml配置路径-->
+        <!--        mapper从根目录(resources)开始找-->
+<!--        <mapper resource="carMapper.xml"/>-->
+        <package name="com.hyw.test01.mapper.carMapper"/>
+    </mappers>
+</configuration>
