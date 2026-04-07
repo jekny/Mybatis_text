@@ -32,6 +32,6 @@
         <!--        其中一个sqlMapper.xml配置路径-->
         <!--        mapper从根目录(resources)开始找-->
 <!--        <mapper resource="carMapper.xml"/>-->
-        <package name="com.hyw.test01.mapper.carMapper"/>
+        <package name="com.hyw.test01.mapper"/>
     </mappers>
 </configuration>

@@ -1,5 +1,10 @@
 package com.hyw.test01.mapper;
 
+import com.hyw.test01.entity.car;
+
+import java.util.List;
+import java.util.Map;
+
 /**
  * ClassName: carMapper
  * Description:
@@ -8,5 +13,6 @@ package com.hyw.test01.mapper;
  * @Create 2026/4/7 18:09
  * @Version 1.0
  */
-public class carMapper {
+public interface carMapper {
+    List<car> selectDongTaiSql(Map<String, Object>  params);
 }
