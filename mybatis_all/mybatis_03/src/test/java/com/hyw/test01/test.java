@@ -3,6 +3,7 @@ package com.hyw.test01;
 import com.hyw.test01.entity.car;
 import com.hyw.test01.mapper.carMapper;
 import com.hyw.test01.util.sqlSessionUtil;
+import org.apache.ibatis.session.SqlSession;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
@@ -40,5 +41,23 @@ public class test {
                 cars) {
             System.out.println(car);
         }
+    }
+
+    @Test
+    public void test03(){
+        SqlSession sqlsession =  sqlSessionUtil.openSqlSession();
+        carMapper mapper = sqlsession.getMapper(carMapper.class);
+
+        Map<String,Object> map = new HashMap<>();
+        map.put("brand","byd666");
+        map.put("id",4);
+        List<car> cars = mapper.selectDongTaiSql3(map);
+        sqlsession.commit();
+        for (car car :
+                cars) {
+            System.out.println(car);
+        }
+        sqlsession.close();
+
     }
 }

@@ -16,4 +16,5 @@ import java.util.Map;
 public interface carMapper {
     List<car> selectDongTaiSql(Map<String, Object>  params);
     List<car> selectDongTaiSql2(Map<String, Object>  params);
+    List<car> selectDongTaiSql3(Map<String, Object>  params);
 }

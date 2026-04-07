@@ -22,4 +22,20 @@
 
     </select>
 
+    <select id="selectDongTaiSql3" parameterType="Map" resultType="car">
+        update t_car
+        <set>
+            <if test="brand != null and brand!=''">
+                brand = #{brand},
+            </if>
+            <if test="time != null and time!=''">
+                time = #{time},
+            </if>
+            <if test="type != null and type!=''">
+                type = #{type},
+            </if>
+        </set>
+        where id = #{id}
+    </select>
+
 </mapper>
