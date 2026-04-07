@@ -29,4 +29,16 @@ public class test {
             System.out.println(car);
         }
     }
+
+    @Test
+    public void test02(){
+        carMapper mapper =  sqlSessionUtil.openSqlSession().getMapper(carMapper.class);
+        Map<String,Object> map = new HashMap<>();
+        map.put("brand","by");
+        List<car> cars = mapper.selectDongTaiSql2(map);
+        for (car car :
+                cars) {
+            System.out.println(car);
+        }
+    }
 }

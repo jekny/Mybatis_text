@@ -11,4 +11,15 @@
         </if>
     </select>
 
+    <select id="selectDongTaiSql2" resultType="car" parameterType="Map">
+        select * from t_car
+<!--        where会在第一个条件前面自动加一个where关键字，并且会自动删除第一个条件的and，or等关键字-->
+        <where>
+            <if test="brand != null and brand!=''">
+                brand like concat('%',#{brand},'%')
+            </if>
+        </where>
+
+    </select>
+
 </mapper>
