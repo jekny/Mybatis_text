@@ -1,6 +1,7 @@
 package com.hyw.test01.mapper;
 
 import com.hyw.test01.entity.car;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 import java.util.Map;
@@ -18,4 +19,6 @@ public interface carMapper {
     List<car> selectDongTaiSql2(Map<String, Object>  params);
     List<car> selectDongTaiSql3(Map<String, Object>  params);
     List<car> selectDongTaiSql4(Map<String, Object>  params);
+
+    int deleteSome(@Param("ids") int[] ids);
 }

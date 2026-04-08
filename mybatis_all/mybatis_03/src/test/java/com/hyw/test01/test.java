@@ -6,6 +6,7 @@ import com.hyw.test01.util.sqlSessionUtil;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -75,5 +76,16 @@ public class test {
                 cars) {
             System.out.println(car);
         }
+    }
+
+    @Test
+    public void test05(){
+        SqlSession sqlsession = sqlSessionUtil.openSqlSession();
+        carMapper mapper = sqlsession.getMapper(carMapper.class);
+        int arr[] = {1,2};
+        int count = mapper.deleteSome(arr);
+        System.out.println(count);
+        sqlsession.commit();
+        sqlsession.close();
     }
 }

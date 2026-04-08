@@ -57,4 +57,11 @@
 
     </select>
 
+    <delete id="deleteSome" >
+        delete from t_car where id in
+        <foreach collection="ids" open="(" close=")" separator="," item="id" >
+            #{id}
+        </foreach>
+    </delete>
+
 </mapper>
