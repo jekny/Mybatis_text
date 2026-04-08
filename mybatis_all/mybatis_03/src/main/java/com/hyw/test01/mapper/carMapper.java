@@ -21,4 +21,6 @@ public interface carMapper {
     List<car> selectDongTaiSql4(Map<String, Object>  params);
 
     int deleteSome(@Param("ids") int[] ids);
+
+    int insertSome(@Param("cars") List<car> cars);
 }

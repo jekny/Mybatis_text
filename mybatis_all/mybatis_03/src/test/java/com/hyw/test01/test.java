@@ -88,4 +88,18 @@ public class test {
         sqlsession.commit();
         sqlsession.close();
     }
+
+    @Test
+    public void test06(){
+        SqlSession sqlsession = sqlSessionUtil.openSqlSession();
+        carMapper mapper = sqlsession.getMapper(carMapper.class);
+        List<car> cars = new ArrayList<>();
+        cars.add(new car(8,"桂a111","byd",12,"2025-09-09","燃油"));
+        cars.add(new car(9,"桂a111","byd",12,"2025-09-09","燃油"));
+        cars.add(new car(10,"桂a111","byd",12,"2025-09-09","燃油"));
+        int count = mapper.insertSome(cars);
+        sqlsession.commit();
+        sqlsession.close();
+        System.out.println(count);
+    }
 }

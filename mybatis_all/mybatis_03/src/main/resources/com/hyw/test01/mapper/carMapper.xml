@@ -64,4 +64,11 @@
         </foreach>
     </delete>
 
+    <insert id="insertSome" parameterType="car">
+        insert into t_car values
+        <foreach collection="cars" item="car" separator=",">
+            (#{car.id},#{car.num},#{car.brand},#{car.price},#{car.time},#{car.type})
+        </foreach>
+    </insert>
+
 </mapper>
