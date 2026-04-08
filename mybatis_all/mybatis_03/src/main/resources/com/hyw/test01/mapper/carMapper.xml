@@ -38,6 +38,7 @@
         where id = #{id}
     </select>
 
+<!--    如果第一个条件满足，就不会走下面的条件了，如果前面两个条件都不满足，otherwise是兜底，即使他是空也会进入，相反，如果上面有条件满足则不会执行-->
     <select id="selectDongTaiSql4" resultType="car" parameterType="Map">
         select * from t_car
         <where>
