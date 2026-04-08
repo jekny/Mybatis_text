@@ -38,4 +38,22 @@
         where id = #{id}
     </select>
 
+    <select id="selectDongTaiSql4" resultType="car" parameterType="Map">
+        select * from t_car
+        <where>
+            <choose>
+                <when test="brand != null and brand!=''">
+                    brand like concat('%',#{brand},'%')
+                </when>
+                <when test="type != null and type!=''">
+                    type like concat('%',#{type},'%')
+                </when>
+                <otherwise>
+                    num like concat('%',#{num},'%')
+                </otherwise>
+            </choose>
+        </where>
+
+    </select>
+
 </mapper>

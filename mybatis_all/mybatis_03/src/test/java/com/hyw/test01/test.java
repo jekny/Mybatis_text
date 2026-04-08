@@ -60,4 +60,20 @@ public class test {
         sqlsession.close();
 
     }
+
+    @Test
+    public void test04(){
+        SqlSession sqlsession = sqlSessionUtil.openSqlSession();
+        carMapper mapper = sqlsession.getMapper(carMapper.class);
+        Map<String,Object> map = new HashMap<>();
+        map.put("brand","by");
+        map.put("type","油");
+        map.put("num","桂");
+        List<car> cars = mapper.selectDongTaiSql4(map);
+        sqlsession.close();
+        for (car car :
+                cars) {
+            System.out.println(car);
+        }
+    }
 }
