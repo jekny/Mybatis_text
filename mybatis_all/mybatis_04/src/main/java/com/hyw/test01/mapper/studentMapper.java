@@ -1,5 +1,11 @@
 package com.hyw.test01.mapper;
 
+import com.hyw.test01.entity.Student;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
+import java.util.Map;
+
 /**
  * ClassName: studentMapper
  * Description:
@@ -9,5 +15,5 @@ package com.hyw.test01.mapper;
  * @Version 1.0
  */
 public interface studentMapper {
-
+    List<Student> selectStudent(Map<String,Object> map);
 }

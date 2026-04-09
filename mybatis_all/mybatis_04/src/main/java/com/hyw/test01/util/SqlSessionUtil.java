@@ -1,6 +1,7 @@
 package com.hyw.test01.util;
 
 import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
@@ -8,14 +9,14 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
- * ClassName: SqlSession
+ * ClassName: SqlSessionUtil
  * Description:
  *
  * @Author jekny
  * @Create 2026/4/9 17:19
  * @Version 1.0
  */
-public class SqlSession {
+public class SqlSessionUtil {
     private static SqlSessionFactory sqlSessionFactory;
     static {
         SqlSessionFactoryBuilder sqlSessionFactoryBuilder = new SqlSessionFactoryBuilder();
@@ -27,7 +28,7 @@ public class SqlSession {
         }
     }
 
-    public SqlSession openSqlSession(){
+    public static SqlSession openSqlSession(){
         SqlSession sqlSession = (SqlSession) sqlSessionFactory.openSession();
         return sqlSession;
     }

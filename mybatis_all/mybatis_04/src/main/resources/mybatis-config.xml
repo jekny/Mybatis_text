@@ -7,6 +7,9 @@
     <settings>
         <setting name="logImpl" value="STDOUT_LOGGING"/>
     </settings>
+    <typeAliases>
+        <typeAlias type="com.hyw.test01.entity.Student" alias="student"/>
+    </typeAliases>
 
     <!--    多环境environments-->
     <environments default="development">
