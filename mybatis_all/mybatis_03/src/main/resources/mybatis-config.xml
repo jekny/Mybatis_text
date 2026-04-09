@@ -32,6 +32,8 @@
         <!--        其中一个sqlMapper.xml配置路径-->
         <!--        mapper从根目录(resources)开始找-->
 <!--        <mapper resource="carMapper.xml"/>-->
+        <!--会自动识别package路径下的说有XXXMapper,但需要注意的是xxxMapper的目录路径要和其对映的xxxMapper.xml配置文件的目录位置要保持一致（因为idea经过
+        编译后生成的class路径就会相同，这样mybatis就能够识别到）-->
         <package name="com.hyw.test01.mapper"/>
     </mappers>
 </configuration>
