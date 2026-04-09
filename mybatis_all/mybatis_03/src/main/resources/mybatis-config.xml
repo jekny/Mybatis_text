@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-    <!--    开启日志-->
+    <!--    开启日志（mybatis中自带的日志记录，默认情况下是关闭的，这里要手动打开日志记录）-->
     <settings>
         <setting name="logImpl" value="STDOUT_LOGGING"/>
     </settings>
