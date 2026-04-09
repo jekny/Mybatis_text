@@ -16,4 +16,5 @@ import java.util.Map;
  */
 public interface studentMapper {
     List<Student> selectStudent(Map<String,Object> map);
+    List<Student> selectAbout(@Param("id") String id);
 }

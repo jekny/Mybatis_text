@@ -8,4 +8,17 @@
         select sid,sname,cid from t_student where sid = #{id}
     </select>
 
+    <select id="selectAbout">
+        select
+            s.sid,s.sname,s.cid,c.cname
+        from
+            t_student s
+        join
+            t_class c
+        on
+            s.cid = c.cid
+        where
+            s.sid = #{id}
+    </select>
+
 </mapper>
