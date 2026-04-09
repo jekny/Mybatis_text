@@ -11,6 +11,8 @@
     <resultMap id="select1" type="com.hyw.test01.entity.Student" >
         <id property="sid" column="sid" />
         <result property="sname" column="sname"/>
+<!--        级联属性，当一个类里面的变量是另外一个类时，用级联属性-->
+<!--        （当要查询的结果列有类中的变量(这个变量时另一个类)里面的属性时）否则在查询结果输出的时候，那个变量的类会是空-->
         <result property="clazz.cid" column="cid"/>
         <result property="clazz.cname" column="cname"/>
     </resultMap>
