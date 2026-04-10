@@ -9,6 +9,7 @@
     </settings>
     <typeAliases>
         <typeAlias type="com.hyw.test01.entity.Student" alias="student"/>
+        <typeAlias type="com.hyw.test01.entity.Class" alias="clazz"/>
     </typeAliases>
 
     <!--    多环境environments-->

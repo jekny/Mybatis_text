@@ -42,4 +42,15 @@ public class MyTest {
             System.out.println(stu.toString());
         }
     }
+
+    @Test
+    public void test03(){
+        SqlSession sqlSession = SqlSessionUtil.openSqlSession();
+        studentMapper mapper = sqlSession.getMapper(studentMapper.class);
+        List<Student> students =mapper.selectFenBu("202301");
+        for (Student stu :
+                students) {
+            System.out.println(stu.toString());
+        }
+    }
 }
