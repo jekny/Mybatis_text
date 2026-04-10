@@ -50,7 +50,7 @@ public class MyTest {
         List<Student> students =mapper.selectFenBu("202301");
         for (Student stu :
                 students) {
-            System.out.println(stu.toString());
+            System.out.println(stu.getSid()+" / "+stu.getClazz().getCname());//开启全局懒加载
         }
     }
 }

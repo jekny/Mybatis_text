@@ -33,6 +33,7 @@
     <resultMap id="FenBuselect1" type="com.hyw.test01.entity.Student">
         <id property="sid" column="sid"/>
         <result property="sname" column="sname"/>
+<!--        开启懒加载-->
         <association property="clazz" select="com.hyw.test01.mapper.clazzMapper.selectBycid" column="cid"/>
     </resultMap>
     <select id="selectFenBu" resultMap="FenBuselect1">
