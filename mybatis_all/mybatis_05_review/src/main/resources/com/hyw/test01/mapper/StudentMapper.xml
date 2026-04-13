@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--映射文件,专门写sql语句的文件,映射成对象-->
+<mapper namespace="com.hyw.test01.mapper.StudentMapper">
+    <select id="selectBySid" resultType="Student">
+        select sid,sname,cid from t_student where sid = #{sid}
+    </select>
+
+    <resultMap id="map1" type="com.hyw.test01.entity.Student">
+        <id property="sid" column="sid"/>
+        <result property="sname" column="sname"/>
+        <association property="clazz" select="com.hyw.test01.mapper.ClazzMapper.selectByCid" column="cid"/>
+    </resultMap>
+    <select id="selectBySidToCname" resultMap="map1">
+        select sid,sname,cid from t_student where sid = #{sid}
+    </select>
+</mapper>
